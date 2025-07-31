@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/css/project.css">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <div class="container">
+        <form action="/add-project" method="POST" enctype="multipart/form-data">
+            <div class="addProject">
+                <h2>ADD MY PROJECT</h2>
+                <div class="TwoformField">
+                    <label for="name">Project Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+               
+                <div class="formField">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+                <div class="formField">
+                    <label for="live_demo">Live Demo URL</label>
+                    <input type="text" name="live_demo" id="live_demo" placeholder="https://example.com">
+                </div>
+
+                <div class="formField">
+                    <label for="tech">Technologies</label>
+                    <div class="twoColumnField">
+                        <div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="HTML" value="HTML">
+                                <label style="font-weight: normal; margin-left: .5rem;"  for="HTML">HTML</label>
+                            </div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="CSS"value="CSS">
+                                <label style="font-weight: normal; margin-left: .5rem;"  for="CSS">CSS</label>
+                            </div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="BootStrap" value="BootStrap">
+                                <label style="font-weight: normal; margin-left: .5rem;" for="BootStrap">BootStrap</label>
+                            </div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="JavaScript" value="JavaScript">
+                                <label style="font-weight: normal; margin-left: .5rem;" for="JavaScript">JavaScript</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="Node.js" value="Node.js">
+                                <label style="font-weight: normal; margin-left: .5rem;"  for="Node.js">Node.js</label>
+                            </div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="Tailwind" value="Tailwind">
+                                <label style="font-weight: normal; margin-left: .5rem;"  for="Tailwind">Tailwind</label>
+                            </div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="Postgresql" value="Postgresql">
+                                <label style="font-weight: normal; margin-left: .5rem;"  for="Postgresql">Postgresql</label>
+                            </div>
+                            <div class="rowFormField">
+                                <input type="checkbox" name="technologies" id="Express.js" value="Express.js">
+                                <label style="font-weight: normal; margin-left: .5rem;"  for="Express.js">Express.js</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="formField">
+                    <button id="add">submit</button>
+                </div>
+            </div>
+        </form>
+             <form action="/" method="GET">
+                <input type="hidden" name="filter" value="live-demo">
+                <button type="submit">Filter: Live Demo Only</button>
+            </form>
+
+    {{!-- <script src="../asset/js/script.js"></script> --}}
+
+</body>
+
+</html>

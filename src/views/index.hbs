@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Ferdiansyah M</title>
+        
+        <!--Icon Website-->
+        <link  rel="icon" type="image/jpg" href="../asset/image/favicon.jpg">
+        
+        <link rel="stylesheet" href="../../asset/css/style.css">
+
+        <!--Link CDN Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+        <!--Font Google nya-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        // Add custom colors here if needed
+                    },
+                },
+            },
+        }
+    </script>
+    </head>
+            <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar -->
+        <nav class="fixed top-0 left-0 right-0 z-30 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex items-center justify-between">
+                    <a href="/" class="group">
+                        <img src="../asset/image/favicon.jpg" alt="SE Logo" class="h-8 w-auto transition-transform duration-300 group-hover:scale-110">
+                    </a>
+        
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#tech-stack" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Tech Stack</a>
+                        <a href="#experience" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Experience</a>
+                        <a href="#projects" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                        
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/6285213618167" target="_blank" class="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded-lg transition-colors flex items-center font-medium">
+                           <img src="../asset/image/icon-whatsapp.jpg" alt="WhatsApp" class="w-4 h-4 mr-2">
+                            Let's Talk
+                        </a>
+        
+                        <!-- CV Download Button -->
+                        <a href="https://drive.google.com/file/d/1VF1FzsiomCiB9BdU_a_yT8ZSFfxSTu7x/view" target="_blank" class="bg-black dark:bg-white text-white dark:text-gray-900 text-sm px-4 py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center font-medium">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Download CV
+                        </a>
+        
+                        <!-- Dark Mode Toggle -->
+                        <button id="toggle-theme" 
+                        class="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                            <!-- Sun icon -->
+                            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                            <!-- Moon icon -->
+                            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                        </button>
+                       
+              
+                    </div>
+        
+                    <!-- Mobile Menu Button -->
+                    <div class="flex items-center space-x-4 md:hidden">
+
+                        <!-- Dark Mode Toggle Mobile -->
+                        <button id="theme-toggle-mobile" 
+                        class="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                            
+                            <!-- Sun icon -->
+                            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                            <!-- Moon icon -->
+                            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                        </button>
+        
+                        <button id="mobile-menu-button" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                     
+                    </div>
+                </div>
+            </div>
+          </nav>
+
+
+        <!-- Spacer to prevent content from hiding under fixed navbar -->
+        <div class="h-20"></div>        <!-- Mobile Drawer -->
+        <div id="mobile-drawer" class="fixed inset-0 z-40 invisible">
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 opacity-0"></div>
+        
+            <!-- Drawer Content -->
+            <div class="absolute right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex flex-col h-full">
+                    <!-- Close Button -->
+                    <div class="flex justify-end p-4">
+                        <button id="close-drawer" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+        
+                    <!-- Mobile Menu Links -->
+                    <div class="flex flex-col px-6 py-4 space-y-6">
+                        <a href="#tech-stack" class="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Tech Stack</a>
+                        <a href="#experience" class="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Experience</a>
+                        <a href="#projects" class="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a>
+                        <a href="https://drive.google.com/file/d/1VF1FzsiomCiB9BdU_a_yT8ZSFfxSTu7x/view" target="_blank" class="bg-black dark:bg-white text-white dark:text-gray-900 text-base px-5 py-2 rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors text-center">Download
+                            CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <!-- Hero Section -->
+<div class="container mx-auto px-6 py-12 md:py-24">
+  <!-- Hero Section -->
+  <div id="hero">
+    <!-- Hero Section -->
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16 mb-32">
+      <!-- Left Content - Profile Image -->
+      <div class="relative w-full lg:w-1/3 flex justify-center lg:justify-start">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+          </div>
+          <img src="../asset/image/profile-new.jpg" alt="Profile" class="relative w-64 h-64 lg:w-[320px] lg:h-[320px] rounded-xl shadow-lg object-cover transform transition duration-500 hover:scale-105">
+        </div>
+      </div>
+    
+      <!-- Right Content -->
+      <div class="w-full lg:w-2/3 text-center lg:text-left">
+        <div class="mb-8">
+          <h1 class="text-4xl lg:text-6xl font-bold mb-6">Hi, I'm Iyan 👋</h1>
+          <p class="text-xl lg:text-2xl text-gray-600 dark:text-gray-400 font-medium mb-6">
+             Full-Stack Developer
+          </p>
+          <p class="text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+           Saya adalah seorang lulusan dari Sekolah Menengah Atas atau biasa disebut SMA,saya memiliki ketertarikan mengenai Web Developer,
+           dan ingin menguasai di bidang Full stack developer.Saya juga suka belajar otodidak melalui platform seperti W3SCHOOL,atau dari medsos seperti youtube dan lain lain
+           ,dan mengenai bahasa pemograman yang sudah saya pelajari sudah saya cantumkan dibawah ini
+          </p>
+        </div>
+    
+        <!-- Location & Availability -->
+        <div class="flex flex-col items-center lg:items-start space-y-3 mb-8">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span class="text-gray-500 dark:text-gray-400">Kab Tangerang, Citra Raya, Indonesia</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+            <span class="text-gray-500 dark:text-gray-400">Available for new projects</span>
+          </div>
+        </div>
+    
+        <!-- Social Links & CTA -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="https://wa.me/6285213618167" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition-colors flex items-center justify-center font-medium">
+            <img src="../asset/image/icon-whatsapp.jpg" alt="WhatsApp" class="w-5 h-5 mr-2">
+            Let's Talk
+          </a>
+          <a href="https://drive.google.com/file/d/1VF1FzsiomCiB9BdU_a_yT8ZSFfxSTu7x/view" target="_blank" class="w-full sm:w-auto bg-black dark:bg-white text-white dark:text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center font-medium">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>   </div>
+
+  <!-- Tech Stack Section -->
+  <div id="tech-stack">
+    <!-- Tech Stack Section -->
+    <div class="mb-32">
+        <h2 class="text-2xl md:text-3xl font-bold mb-12">Tech Stack - Tools I Use Everyday</h2>
+    
+        <!-- Swiper Container -->
+        <div class="relative">
+            <!-- Gradient Overlay Left -->
+            <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-white dark:from-gray-900 to-transparent pointer-events-none"></div>
+            <!-- Gradient Overlay Right -->
+            <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-white dark:from-gray-900 to-transparent pointer-events-none"></div>
+    
+            <div class="swiper tech-swiper swiper-initialized swiper-horizontal">
+                <div class="swiper-wrapper py-4" id="swiper-wrapper-7637ea9b628518f6" aria-live="off" style="transition-duration: 5000ms; transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide swiper-slide-active" role="group" aria-label="3 / 22" style="margin-right: 30px;" data-swiper-slide-index="2">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/html.jpg" alt="HTML">
+                            </div>
+                            <span>HTML</span>
+                        </div>
+                    </div><div class="swiper-slide swiper-slide-next" role="group" aria-label="4 / 22" style="margin-right: 30px;" data-swiper-slide-index="3">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/javascript.jpg" alt="JavaScript">
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="5 / 22" style="margin-right: 30px;" data-swiper-slide-index="4">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/postgresql.png" alt="PostgreSQL">
+                            </div>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="6 / 22" style="margin-right: 30px;" data-swiper-slide-index="5">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/css.png" alt="CSS">
+                            </div>
+                            <span>CSS</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="7 / 22" style="margin-right: 30px;" data-swiper-slide-index="6">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/bootsrap.png" alt="BOOTSTRAP">
+                            </div>
+                            <span>BootStrap</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="11 / 22" style="margin-right: 30px;" data-swiper-slide-index="10">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/tailwind-css.png" alt="Tailwind">
+                            </div>
+                            <span>Tailwind</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="12 / 22" style="margin-right: 30px;" data-swiper-slide-index="11">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/nodejs.jpg" alt="Node.js">
+                            </div>
+                            <span>Node.js</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="13 / 22" style="margin-right: 30px;" data-swiper-slide-index="12">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/Expressjs.jpg" alt="Express.js">
+                            </div>
+                            <span>Express.js</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="14 / 22" style="margin-right: 30px;" data-swiper-slide-index="13">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/html.jpg" alt="HTML">
+                            </div>
+                            <span>HTML</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="15 / 22" style="margin-right: 30px;" data-swiper-slide-index="14">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/javascript.jpg" alt="JavaScript">
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="16 / 22" style="margin-right: 30px;" data-swiper-slide-index="15">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/postgresql.png" alt="PostgreSQL">
+                            </div>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="17 / 22" style="margin-right: 30px;" data-swiper-slide-index="16">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/css.png" alt="CSS">
+                            </div>
+                            <span>CSS</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="18 / 22" style="margin-right: 30px;" data-swiper-slide-index="17">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/bootsrap.png" alt="BOOTSTRAP">
+                            </div>
+                            <span>BootStrap</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="22 / 22" style="margin-right: 30px;" data-swiper-slide-index="21">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/tailwind-css.png" alt="Tailwind">
+                            </div>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                    <!-- Node.js -->
+                    
+                    <!-- Express.js -->
+                    
+                    <!-- TypeScript -->
+                    
+                    <!-- JavaScript -->
+                    
+                    <!-- PostgreSQL -->
+                    
+                    <!-- MongoDB -->
+                    
+                    <!-- .NET -->
+                    
+                    <!-- Unity -->
+                    
+                    <!-- React -->
+                    
+                    <!-- Next.js -->
+                    
+                    <!-- Tailwind -->
+                    
+                <div class="swiper-slide" role="group" aria-label="1 / 22" style="margin-right: 30px;" data-swiper-slide-index="0">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/nodejs.jpg" alt="Node.js">
+                            </div>
+                            <span>Node.js</span>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="2 / 22" style="margin-right: 30px;" data-swiper-slide-index="1">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <img src="../asset/image/Expressjs.jpg" alt="Express.js">
+                            </div>
+                            <span>Express.js</span>
+                        </div>
+                    </div></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+    </div>
+    
+
+  {{!-- <!-- Work Experience Section -->
+  <div id="experience">
+    <!-- Experience Section -->
+    <div class="mb-32">
+      <div class="flex justify-between items-center mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold">Work Experiences:</h2>
+        {{#each projects}}
+      </div>
+      <div class="space-y-6">
+        <!-- DumbWays -->
+        <div class="flex flex-col md:flex-row items-start bg-white dark:bg-gray-800 p-6 md:p-8 rounded-xl shadow-sm">
+          <img src="{{this.image}}" alt="Logo" class="w-16 h-16 rounded-lg mb-4 md:mb-0 object-contain bg-white">
+          <div class="md:ml-8 flex-grow">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+              <div>
+                <h3 class="font-semibold text-lg">{{this.projects_name}}</h3>
+                <p class="text-green-600 dark:text-green-400 text-sm">{{this.description}}</p>
+              </div>
+              <span class="text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0"></span>
+            </div>
+            <ul class="text-gray-600 dark:text-gray-400 text-sm space-y-2 list-disc list-inside mb-4">
+               {{#each (splitLines this.description)}}
+              <li>{{this}}</li>
+                 {{/each}}
+            </ul>
+            <div class="flex flex-wrap gap-2">
+               {{#each (splitTags this.technologies)}}
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium text-gray-600 dark:text-gray-400">{{this}}</span>
+                      {{/each}}
+            </div>
+          </div>
+          <div class="absolute top-4 right-4 text-sm text-blue-600 font-semibold">
+            {{formatDate this.start_date}} - {{formatDate this.end_date}}
+          </div>
+        </div>
+    
+          </div>
+          {{/each}} --}}
+
+  <!-- Projects Section -->
+  <div id="projects">
+    <!-- Projects Section -->
+    <div class="mb-32">
+      <div class="flex justify-between items-center mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold">My Projects:</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!--Project 1 -->
+        {{#each project}}
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden transition-colors hover:shadow-md">
+          <div class="relative h-52 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+            <img src="{{this.image}}" alt="{{this.nama_project}}" class="w-full h-full object-contain group-hover:opacity-90 transition-opacity">
+          </div>
+          <div class="p-6 md:p-8">
+            <h3 class="font-semibold text-xl mb-3">{{this.nama_project}}</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">{{this.description}}</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium text-gray-600 dark:text-gray-400">{{this.technologies}}</span>
+            </div>
+            <div class="flex gap-3"></div>
+              <span class="inline-flex items-center px-3 py-1.5 text-xs text-gray-500 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                Private Repository
+              </span>
+              {{#if this.live_demo}}
+              <a href="{{this.live_demo}}" target="_blank" class="inline-flex items-center px-3 py-1.5 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
+                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+                Live Demo
+              </a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+    
+    
+        
+    
+          </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <!-- Contact Section -->
+    <div class="mb-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3">Let's build and learn something
+        together</h2>
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+        <a href="mailto:ferdiansyahm60@gmail.com" class="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span class="text-sm">ferdiansyahm60@gmail.com</span>
+        </a>
+        <span class="hidden md:inline text-gray-300 dark:text-gray-600">|</span>
+        <div class="flex items-center space-x-2">
+          <img src="../asset/image/icon-whatsapp.jpg" alt="WhatsApp" class="w-5 h-5 mr-2">
+          <span class="text-sm">+62 852-1361-8167</span>
+        </div>
+      </div>
+    </div>   </div>
+</div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-8 text-center text-gray-600 dark:text-gray-400 text-sm border-t border-gray-200 dark:border-gray-700">
+            <p>© 2025 Designed and coded with ❤️ by Ferdiansyah Maulana</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://github.com/suryaelidanto" target="_blank" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/cintarasuryaelidanto" target="_blank" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                    </svg>
+                </a>
+            </div>
+        </footer>    </div>
+        <!-- Swiper Assets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <script src="../../asset/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../../asset/js/swipper-init.js"></script>
+    <script src="../../asset/js/theme.js" defer></script>
+    <script src="../../asset/js/menu.js" defer></script>
+
+    </body>
+</html>
